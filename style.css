@@ -1,0 +1,45 @@
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+*{
+    font: inherit; 
+    margin: 0; 
+}
+
+
+body{
+    min-height: 100vh;
+    background-color: antiquewhite;
+}
+
+.container{
+    display: grid; 
+    grid-template-columns: repeat(3, auto);
+    max-width: 50rem;
+    justify-content: center;
+    margin-inline: auto;
+    gap: 1rem; 
+    border: 1px solid black;
+}
+main, header{
+   text-align: center;
+}
+
+.container > *{
+    border-radius: 100px;
+    border: 5px solid black; 
+    cursor: pointer;
+    width: 10rem; 
+    height: 10rem;
+    background-color:firebrick;
+}
+
+button[data-active="true"]{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(images/mole.png);
+}
+
